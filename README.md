@@ -3,6 +3,8 @@
 ALE v1.0 is implemented using C++ and supports assembly language dialect used in Stanford CS107 - Programming Paradigms course.
 The emulator offers few things which are covered below.
 
+----
+
 ### ALE v1.0 supports:
 * Only integer numbers(Both positive and negative).
 * Negative numbers just using the minus symbol right before the number(E.g. ‘R1 + -180’). Note that if instruction contains only one ‘-‘ symbol it must be delimited with space from the number(E.g. ‘R1-10’ will not work, you must write ‘R1 - 10’ instead).
@@ -32,3 +34,11 @@ used together, error will be thrown.
 * *Accessed address is out of range.* - If the address is negative or less than the value stored in SP register.
 * *Accessed address isn't initialized.* - If there is nothing written on the accessed address.
 * *Memory leak detected.* - If the allocated memory isn’t deallocated fully before the final RET instruction.
+
+----
+
+### Build instructions:
+`cd` to the 'source-code' folder and execute:
+```cmd
+> g++ *.cpp
+```
